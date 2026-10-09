@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS resume_analyzer;
+USE resume_analyzer;
+
+CREATE TABLE IF NOT EXISTS analyses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  job_title VARCHAR(255) NOT NULL,
+  score INT NOT NULL,
+  result JSON NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
